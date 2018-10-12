@@ -6,12 +6,15 @@ function Number()
     this.val=1;
   else
     this.val=0;
-  this.speed=random(height/500)+height/100
+  this.speed=random(5)+1;
   this.fall=function()
   {
+    if(this.y>height+width/25)
+      this.y=-width/25;
     textAlign(CENTER,CENTER);
+    noStroke();
     fill(0,255,0);
-    textSize(width/30)
+    textSize(width/15)
     text(this.val,this.x,this.y);
     this.y+=this.speed;
   }

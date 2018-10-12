@@ -15,7 +15,7 @@ function setupStuff()
   imageMode(CENTER,CENTER);
   textAlign(CENTER,CENTER);
   nums=[];
-  digitOught=250;
+  digitOught=75;
   for(var i=0; i<digitOught; i++)
   {
     nums.push(new Number());
@@ -34,17 +34,17 @@ function draw() {
   }
   for(var i=nums.length-1; i>=0; i--)
   {
-    if(nums[i].y>height+100)
-      nums[i].y=-100
     nums[i].fall();
   }
-  fill(255,0,0);
+  fill(255);
   textSize((width)/25);
   image(jake,width/2,height/2,width/2,width/2);
+  stroke(0);
+  strokeWeight(width/100);
   textAlign(CENTER,BOTTOM);
   text("Congratulations, you fool",width/2,(height/2)-width/4);
   textAlign(CENTER,TOP);
-  text("You've just been hacked",width/2,(height/2)+width/4);
+  text("You just got hacked",width/2,(height/2)+width/4);
 }
 function mousePressed()
 {
